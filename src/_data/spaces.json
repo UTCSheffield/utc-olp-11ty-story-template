@@ -1,0 +1,61 @@
+[
+  {
+    "name": "CL4",
+    "title": "Computer Lab 4",
+    "description": "Health Computer Room",
+    "src": "https://cdn.glitch.global/86682993-761e-4078-8d4d-8bf7e413a46d/CL4.JPG?v=1656934488994",
+    "rotation": "0 180 0",
+    "doors": [
+      {
+        "to": "SOC",
+        "position": "10 1 8.5",
+        "rotation": "0 0 0",
+        "src": "https://cdn.glitch.global/86682993-761e-4078-8d4d-8bf7e413a46d/SOC.JPG?v=1656934497759"
+      }
+    ],
+    "talkers": [
+      {
+        "id": "dino",
+        "modelsrc": "https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf",
+        "position": "2 -1 6",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "audiosrc": "https://cdn.glitch.global/091ff8bf-9268-4304-8958-b78b6e8f87db/TheMoonLanding_64kb.mp3?v=1657281258907"
+      }
+    ]
+  },
+  {
+    "name": "SOC",
+    "title": "Security Operations Center",
+    "description": "",
+    "src": "https://cdn.glitch.global/86682993-761e-4078-8d4d-8bf7e413a46d/SOC.JPG?v=1656934497759",
+    "rotation": "0 0 0",
+    "doors": [
+      {
+        "to": "CL4",
+        "position": "10.5 1 -7.5",
+        "rotation": "0 0 0",
+        "src": "https://cdn.glitch.global/86682993-761e-4078-8d4d-8bf7e413a46d/CL4.JPG?v=1656934488994"
+      }
+    ],
+    "screens": [
+      {
+        "url": "https://aframe.io/",
+        "width": 14,
+        "height": 4,
+        "position": "-1.5 1.7 -11",
+        "rotation": "0 9 2"
+      }
+    ],
+    "talkers": [
+      {
+        "id": "dino",
+        "modelsrc": "https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf",
+        "position": "-8 -1 -9",
+        "rotation": "0 0 0",
+        "scale": "0.01 0.01 0.01",
+        "audiosrc": "https://cdn.glitch.global/091ff8bf-9268-4304-8958-b78b6e8f87db/TheMoonLanding_64kb.mp3?v=1657281258907"
+      }
+    ]
+  }
+]

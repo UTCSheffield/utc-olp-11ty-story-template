@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-home
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+#app {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+</style>
+<div class="wrapper">
+  <div class="content" id="story">
+    {{ content | safe }}
+  </div>
+  
+  <div class="content" id="app"></div>
+</div>
+
+{# The code copies the html from #story  and types it into #app  #}
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<!-- Documentation : https://github.com/tameemsafi/typewriterjs -->
+<script>
+  var app = document.getElementById('app');
+
+  var typewriter = new Typewriter(app, {
+    loop: false,
+    delay: 75,
+  });
+
+  /*var textEl = document.getElementById("story")
+  textEl.style.display = "none";
+  var text = textEl.innerHTML
+
+  typewriter
+    .typeString(textEl.innerHTML)
+    .start();
+    */
+  
+  var textEls = document.querySelectorAll("#story p")
+  textEls.forEach(textEl=>{
+    
+    console.log("textEl", textEl, textEl.outerHTML);
+    var text = textEl;
+
+    typewriter = typewriter
+      .typeString(textEl.outerHTML)
+      .pause(1000);
+    
+    textEl.style.display = "none";
+      
+  })
+ 
+  typewriter.start();
+  
+</script>
